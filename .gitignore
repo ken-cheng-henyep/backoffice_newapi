@@ -1,0 +1,8 @@
+/config/app.php
+/tmp/*
+/logs/*
+data/*.xls
+data/*.xlsx
+data/*.pdf
+.phpintel/
+/vendor/*
