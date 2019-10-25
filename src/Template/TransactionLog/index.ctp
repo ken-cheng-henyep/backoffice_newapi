@@ -1,0 +1,1 @@
+<?= $this->Html->link(__('Aggregated Data Download'), ['action' => 'dateform']) ?>

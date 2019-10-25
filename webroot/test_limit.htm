@@ -1,0 +1,82 @@
+<html>
+    	<head>
+    		<title>Web Shop</title>
+    		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	</head>
+		<style>
+body {font-family: Arial, Sans-Serif;}		
+
+input[type="text"] {
+  padding: 5px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  width:260px;
+  margin-bottom: 2px; 
+  }
+input[type="text"]:focus,
+input[type="text"].focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}	
+label{
+    display:inline-block;
+    width:150px;
+}
+.styled-button {
+	background:#555555;
+	padding:5px 4px;
+	color:#fff;
+	font-size:12px;
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border:1px solid #000000
+}
+
+
+		</style>
+    	<body>
+		Web Shop<br><br>
+    		<form action="https://sales.wecollect.com/hosted/index/" method="post">
+    			<label>Merchant</label><input type="text" name="Merchant" value="9dd5a398-c897-11e4-a1b7-0211eb00a4cc"><br>
+    			<!--<input type="text" name="Site" value="4d19257a-a0b2-11e6-af02-0211eb00a4cc"><br> -->
+  <label>Site</label><input type="radio" name="Site" value="b31a81bc-a0c5-11e6-9f0e-0211eb00a4cc" checked="checked">GHT D b31a81bc-a0c5-11e6-9f0e-0211eb00a4cc<br>
+  <label></label><input type="radio" name="Site" value="00e91390-a0c6-11e6-8012-0211eb00a4cc">GHT W 00e91390-a0c6-11e6-8012-0211eb00a4cc<br>
+  <label></label><input type="radio" name="Site" value="161259b6-a0c6-11e6-a4af-0211eb00a4cc">GHT A 161259b6-a0c6-11e6-a4af-0211eb00a4cc<br>
+  <label></label><input type="radio" name="Site" value="4d19257a-a0b2-11e6-af02-0211eb00a4cc">GHT Q 4d19257a-a0b2-11e6-af02-0211eb00a4cc<br>
+  <label></label><input type="radio" name="Site" value="3e0d30ee-aa21-11e6-b5bd-0211eb00a4cc">GHT DC 3e0d30ee-aa21-11e6-b5bd-0211eb00a4cc<br>
+  <label></label><input type="radio" name="Site" value="5073286a-aa21-11e6-b068-0211eb00a4cc">GHT DC30K 5073286a-aa21-11e6-b068-0211eb00a4cc<br>
+  <label></label><input type="radio" name="Site" value="06b116e4-b05a-11e6-b161-0211eb00a4cc">GHT Q(DC) 06b116e4-b05a-11e6-b161-0211eb00a4cc<br>
+  <label></label><input type="radio" name="Site" value="f1b433be-cca3-11e6-a805-0211eb00a4cc">GHT C f1b433be-cca3-11e6-a805-0211eb00a4cc<br>
+  <label></label><input type="radio" name="Site" value="2d6c1cd6-5495-11e7-934f-0242ac110002">GHT D 2d6c1cd6-5495-11e7-934f-0242ac110002 (No Verification)<br>
+  <label></label><input type="radio" name="Site" value="1ef3f844-4731-11e6-9db5-0211eb00a4cc">ChinaGPay<br>
+
+    			<label>Schedule</label><input type="text" name="Schedule" value=""><br>
+    			<label>Amount</label><input type="text" name="Amount" value="1.00"><br>
+    			<label>Currency</label><input type="text" name="Currency" value="CNY"><br>
+    			<label>TransRef</label><input type="text" name="TransRef" value="TestTxn"><br>
+    			<label>Product</label><input type="text" name="Product" value="lots of stuff"><br>
+    			<label>PaymentType</label><input type="text" name="PaymentType" value="cup"><br>
+    			<label>AttemptMode</label><input type="text" name="AttemptMode" value="1"><br>
+    			<label>TestTrans</label><input type="text" name="TestTrans" value="0"><br>
+    			<label>customer[email]</label><input type="text" name="customer[email]" value="joe@wecollect.com"><br>
+    			<label>customer[first_name]</label><input type="text" name="customer[first_name]" value="Joe"><br>
+    			<label>customer[last_name]</label><input type="text" name="customer[last_name]" value="Smith"><br>
+    			<label>customer[dob]</label><input type="text" name="customer[dob]" value=""><br>
+    			<label>customer[address1]</label><input type="text" name="customer[address1]" value="mmmmm"><br>
+    			<label>customer[address2]</label><input type="text" name="customer[address2]" value=""><br>
+    			<label>customer[city]</label><input type="text" name="customer[city]" value="mmmmm"><br>
+    			<label>customer[postcode]</label><input type="text" name="customer[postcode]" value="mmmmm"><br>
+    			<label>customer[country]</label><input type="text" name="customer[country]" value="CN"><br>
+    			<label>customer[phone]</label><input type="text" name="customer[phone]" value=""><br>
+    			<label>customer[fax]</label><input type="text" name="customer[fax]" value=""><br>
+    			<label>customer[mobile]</label><input type="text" name="customer[mobile]" value=""><br>
+				<label>BankCode</label><input type="text" name="BankCode" value=""><br>
+				<input type="hidden" name="ReturnUrlSuccess" value="https://www.wecollect.com/privacy?ok=1" >
+                <input type="hidden" name="ReturnUrlFailure" value="http://www.wecollect.com/privacy?ok=0" >
+				<input type="hidden" name="lang" value="zh_CN">
+				<input type="hidden" name="DirectTransfer" value="1">
+				<button class="styled-button" type="submit">Submit</button><br>
+    		 </form>
+       </body>
+</html>

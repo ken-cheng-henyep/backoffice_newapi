@@ -1,0 +1,31 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+<FilesMatch "\.(ico|flv|jpg|jpeg|png|gif|js|css|swf|svg)$">
+    Header unset Last-Modified
+    #Header unset ETag
+    Header set Cache-Control "max-age=604800, public"
+    ExpiresDefault "access plus 7 days"
+</FilesMatch>
+<FilesMatch ".+\.(?!(ico|flv|jpg|jpeg|png|gif|js|css|swf|svg)$)[^\.]+?$">
+#Header set Content-Security-Policy "default-src https:"
+#Header set Content-Security-Policy "default-src 'self'"
+        Header set Strict-Transport-Security "max-age=31536000"
+        # Only allow my site to frame itself
+        Header set Content-Security-Policy "frame-ancestors 'self'"
+        Header set X-Frame-Options "SAMEORIGIN"
+        Header set X-XSS-Protection "1; mode=block"
+        # Prevent browsers from incorrectly detecting non-scripts as scripts
+        Header set X-Content-Type-Options "nosniff"
+	FileETag None
+     	Header unset ETag
+	Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+     	Header set Pragma "no-cache"
+     	Header set Expires "Sun, 01 Jan 1984 00:00:00 GMT"
+</FilesMatch>
+
+php_value upload_max_filesize 10M
+php_value post_max_size 20M
+

@@ -1,0 +1,28 @@
+
+CREATE TABLE IF NOT EXISTS `pnr_transaction_log` (
+  `order_id` varchar(64) COLLATE utf8_bin NOT NULL Comment 'Transaction ID',
+  `transaction_type` varchar(64) COLLATE utf8_bin DEFAULT NULL,
+  `merchant_acct_id` varchar(64) COLLATE utf8_bin NOT NULL,
+  `terminal_id` varchar(64) COLLATE utf8_bin DEFAULT NULL,
+  `fee` double DEFAULT NULL,
+  `order_amount` double DEFAULT '0',
+  `order_currency` varchar(3) COLLATE utf8_bin DEFAULT NULL,
+  `order_time` timestamp NULL DEFAULT NULL COMMENT 'Transaction time',
+  `bank_name` varchar(200) COLLATE utf8_bin DEFAULT NULL,
+  `bank_id` varchar(12) COLLATE utf8_bin DEFAULT NULL,
+  `bank_code` int(11) DEFAULT NULL,
+  `bank_deal_id` varchar(64) COLLATE utf8_bin DEFAULT NULL,
+  `deal_id` varchar(64) COLLATE utf8_bin DEFAULT NULL,
+  `deal_time` timestamp NULL DEFAULT NULL COMMENT 'Process Time',
+  `deal_amount` double DEFAULT '0'  COMMENT 'Process Amount',
+  `deal_currency` varchar(3) COLLATE utf8_bin DEFAULT NULL COMMENT 'Process Currency',
+  `pay_result` varchar(128) COLLATE utf8_bin DEFAULT NULL,
+  `pay_type` varchar(128) COLLATE utf8_bin DEFAULT NULL,
+  `pay_type_name` varchar(128) COLLATE utf8_bin DEFAULT NULL,
+  `ext1` text COLLATE utf8_bin,
+  `ext2` varchar(45) COLLATE utf8_bin DEFAULT NULL,
+  `update_time` timestamp NULL DEFAULT NULL,
+  `create_time` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`order_id`),
+  KEY `ind_tx` (`merchant_acct_id`,`transaction_type`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
